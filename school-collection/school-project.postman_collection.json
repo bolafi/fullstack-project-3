@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "cb8a3a23-5cd0-43d7-958a-e236b6929ca3",
+		"name": "school-project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create teacher account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Fahed alyazidi",
+							"type": "text"
+						},
+						{
+							"key": "birthdate",
+							"value": "04-20-1981",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "al-dafnah",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "fyazidi@school.net",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "fahed555",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/teachers/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"teachers",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show all teachers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/teachers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"teachers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "password",
+							"value": "11223344",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "sali@school.net",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/teachers/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"teachers",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Salah alsaadi",
+							"type": "text"
+						},
+						{
+							"key": "birthdate",
+							"value": "08-24-1987",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "al-nasriyyah",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ssaadi@school.net",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/students/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"students",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show all students",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZjA1ODU4MzUzMTYyYjBmOTAyN2M4NzIiLCJpYXQiOjE1OTQzMTkyNDgsImV4cCI6MTU5NDQwNTY0OH0.7nxxcombX1enl2LxJniXVU9X4FHD01yftLTx3G-vvdY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/students/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update student info",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Nasser Ali",
+							"type": "text"
+						},
+						{
+							"key": "birthdate",
+							"value": "10-13-2010",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "al-duhil",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/students/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"students",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "5f058c43c39c3a3a746ea612"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete student",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZjA1ODU4MzUzMTYyYjBmOTAyN2M4NzIiLCJpYXQiOjE1OTQzMTkyNDgsImV4cCI6MTU5NDQwNTY0OH0.7nxxcombX1enl2LxJniXVU9X4FHD01yftLTx3G-vvdY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/students/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"students",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "5f06ea113a643d5b787fa4e5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show student by email",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZjA1ODU4MzUzMTYyYjBmOTAyN2M4NzIiLCJpYXQiOjE1OTQzMTkyNDgsImV4cCI6MTU5NDQwNTY0OH0.7nxxcombX1enl2LxJniXVU9X4FHD01yftLTx3G-vvdY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/students/:email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"students",
+						":email"
+					],
+					"variable": [
+						{
+							"key": "email",
+							"value": "nali@school.net"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
